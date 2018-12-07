@@ -25,4 +25,4 @@ Game 1:  An EEG visualizer.  Takes the game value from the Processing code and t
 
 Game 2:  An EEG visualizer with progress meter. Performs the same function as Game 1, except the visualizer is just the bottom bar of the panel and the rest of the panel is used as a progress meter. A cursor binks and advances one pixel if the user maintains a meditative state for the gamePace.
 
-Game 3:  Mindball.  This includes the EEG visualizer from game 1, but the progress meter becomes a steel ball on a magnetic track that moves towards or away from the player depending on whether they meet a threshold.
+Game 3:  Mindball.  This optionally includes the EEG visualizer from game 1, but the progress meter becomes a steel ball on a magnetic track that moves towards or away from the player depending on whether they meet a threshold.
