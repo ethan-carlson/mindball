@@ -87,10 +87,12 @@ void clientEvent(Client  myClient) {
         MARatio = int(100*(meditation/attention));
         println("MA Ratio: " + MARatio);
         
+        /*
         if (writeToFile){
           output.println("Attention: " + attention);
           output.println("Meditation: " + meditation);
         }
+        */
       }
       
       JSONObject eegPower = json.getJSONObject("eegPower");
@@ -113,6 +115,19 @@ void clientEvent(Client  myClient) {
         //println("A-Comp: " + alphaComposite);
         //println("B-Comp: " + betaComposite);
         println("Game Ratio: " + gameRatio);
+        
+        if (writeToFile){
+          //output.println("EEG Power Values:");
+          output.print(eegPower.getInt("delta") + ", ");
+          output.print(eegPower.getInt("theta") + ", ");
+          output.print(eegPower.getInt("lowAlpha") + ", ");
+          output.print(eegPower.getInt("highAlpha") + ", ");
+          output.print(eegPower.getInt("lowBeta") + ", ");
+          output.print(eegPower.getInt("highBeta") + ", ");
+          output.print(eegPower.getInt("lowGamma") + ", ");
+          output.print(eegPower.getInt("highGamma") + ", ");
+          output.println("");
+        }
         
         if (gameOn){
           port.write(gameRatio);
